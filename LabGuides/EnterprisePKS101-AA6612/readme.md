@@ -14,16 +14,13 @@ In this lab we have done the PKS installation and deployed a small Kubernetes cl
 
 
 Login into Ops Manager, as shown in the screenshot below. Use "VMware1!" as the decryption passphrase and login to Ops Manager using admin/VMware1! credentials. Familiarize your self with different tile as shown in the second screenshot. There are 3 main tile
-```
-a. BOSH Tile: This is the first tile. It contains the IAAS configuration for bosh to communicate to different IAAS platforms. This BOSH tile is vShere specific and contains creds and other configuration to talk to vCenter in this environment.
-b. PKS Tile: This is the middle tile and contains all Enterprise PKS specific configuration.
-c. harbor Tile: This tile is used to configure and deploy Harbor(Private container registry) in this environment.
-```
-<details><summary>OPS Manager Login</summary>
+
+1. BOSH Tile: This is the first tile. It contains the IAAS configuration for bosh to communicate to different IAAS platforms. This BOSH tile is vShere specific and contains creds and other configuration to talk to vCenter in this environment.
+2. PKS Tile: This is the middle tile and contains all Enterprise PKS specific configuration.
+3. harbor Tile: This tile is used to configure and deploy Harbor(Private container registry) in this environment.
+
+<details><summary>Screenshots</summary>
 <img src="Images/opsman-login.png">
-</details>
-<br/>
-<details><summary>Tiles</summary>
 <img src="Images/tiles.png">
 </details>
 <br/>
