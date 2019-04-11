@@ -258,7 +258,7 @@ The T1 routers are created for each k8s namespaces and the *demo* T1 router was 
 
  
  
-### Running Nginx with Docker
+# Running Nginx with Docker
 1. From the `cli-vm` prompt, enter the command `docker ps` and observe the command output
 
     <details><summary>Screenshot 1</summary>
@@ -719,9 +719,6 @@ In addition to the frontend app, planespotter has 3 additional microservice appl
     </details>
     <br/>
 
-#### Deploying Kubernetes Applications with Helm
-
-Please complete the [Introduction to Helm](https://github.com/CNA-Tech/PKS-Ninja/tree/master/LabGuides/IntroToHelm-HE4490) lab to satisfy the requirements for this section.
 
 **Thank you for completing the Hands On Intro to PKS 101 Lab!**
 
