@@ -1,6 +1,5 @@
 # Introduction to VMware Enterprise PKS
 
-# Introduction
 In this lab you will see how to operationalize Kubernetes through VMware Enterprise PKS.  What does that mean?  Let's start by looking at what Kubernetes does well.  It allows developers to easily deploy applications at scale.  It handles the scheduling of workloads (via pods) across a set of infrastructure nodes.  It provides an easy to use mechanism to increase availability and scale by allowing multiple replicas of application pods, while monitoring those replicas to ensure that the desired state (number of replicas) and the actual state of the application coincide.  Kubernetes also facilitates reduced application downtime through rolling upgrades of application pods.  VMware Enterprise PKS is providing similar capabilities for the Kubernetes platform itself.  Platform engineering teams are becoming tasked with providing a Kubernetes "Dialtone" service for their development teams.  Kubernetes is not a simple platform to manage, so the challenge becomes how to accomplish this without architect level knowledge of the platform.  Through VMware Enterprise PKS, platform engineering teams can deliver Kubernetes clusters through a single API call or CLI command.  Health monitoring is built into the platform, so if a service fails or a VM crashes, VMware Enterprise PKS detects that outage and rebuilds the cluster.  As resources become constrained, clusters can be scaled out to relieve the pressure.  Upgrading Kubernetes is not as easy as upgrading the application pods running on the cluster.  VMware Enterprise PKS provides rolling upgrades to the Kubernetes cluster itself.  The platform is integrated with the vSphere ecosystem, so platform engineers can use the tools they are familiar with to manage these new environments.  Lastly, VMware Enterprise PKS includes licensed and supported Kubernetes, Harbor Enterprise Container Registry and NSX-T - and is available on vSphere and public cloud platforms.
 
 Let's net this out.   VMware Enterprise PKS gives you the latest version of Kubernetes - we have committed to constant compatibility with Google Container Engine (GKE), so you can always be up to date - an easy to consume interface for deploying Kubernetes clusters, scale out capability, Health Monitoring and automated remediation, Rolling upgrade, enterprise container registry with Notary image signing  and Clair vulnerability scanning.  All of this deployed while leveraging NSX-T logical networking from the VMs down to the Kubernetes pods.  Let's jump in.
@@ -257,8 +256,8 @@ The T1 routers are created for each k8s namespaces and the *demo* T1 router was 
     </details>
 
  
- 
-# Running Nginx with Docker
+#  Consuming Containerized Applications with Docker
+### Running Nginx with Docker
 1. From the `cli-vm` prompt, enter the command `docker ps` and observe the command output
 
     <details><summary>Screenshot 1</summary>
@@ -339,6 +338,7 @@ The T1 routers are created for each k8s namespaces and the *demo* T1 router was 
     </details>
     <br/>
 
+
 #  Create a custom Docker Image
 
 1. In this step you will create a dockerfile which you will build to create a new nginx container named `custom-nginx` that includes the configuration you created for the `my-nginx` container in the previous steps
@@ -416,7 +416,7 @@ The T1 routers are created for each k8s namespaces and the *demo* T1 router was 
     </details>
     <br/>
 
-### Distributing your images with docker hub
+### Distributing your images to docker hub
 
 1. From the Main Console (ControlCenter) desktop, open a new tab in the chrome browser and connect to `https://hub.docker.com/` and login. If you do not have a docker hub account, create one now.
 
